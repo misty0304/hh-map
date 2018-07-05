@@ -1,6 +1,7 @@
 # vue-map
 
 > A Vue.js project
+> npm版本1.0.2
 
 ## 1.配置
 
