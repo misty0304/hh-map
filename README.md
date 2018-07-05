@@ -20,7 +20,7 @@ externals: {
 
 ``` bash
 # install dependencies
-npm install
+npm install hh-map@版本号
 
 # serve with hot reload at localhost:8080
 npm run dev
