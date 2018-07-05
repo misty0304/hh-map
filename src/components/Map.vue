@@ -2,7 +2,7 @@
   <div>
     <input type="text" ref="input1" style="width: 300px;"/>
     <div @click="search">搜索</div>
-    <h-map class="map" :center="[116.397428, 39.90923]" :position="position" @cityChange="getData" @getLngLat="getLngLat"></h-map>
+    <h-map class="map" :position="position" @cityChange="getData" @getLngLat="getLngLat"></h-map>
   </div>
 </template>
 
