@@ -2,7 +2,19 @@
   <div>
     <input type="text" ref="input1" style="width: 300px;"/>
     <div @click="search">搜索</div>
-    <h-map class="map" :position="position" @cityChange="getData" @getLngLat="getLngLat"></h-map>
+    起始：<input type="text" ref="input2" style="width: 300px;"/>
+    终点：<input type="text" ref="input3" style="width: 300px;"/>
+    <div @click="searchLoad">搜索路线</div>
+    <h-map
+      class="map"
+      :zoom="15"
+      :position="position"
+      :startPoint="startPoint"
+      :endPoint="endPoint"
+      :showPanel="false"
+      @cityChange="getData"
+      @getLngLat="getLngLat"
+    ></h-map>
   </div>
 </template>
 
@@ -12,7 +24,9 @@
     name: 'Map',
     data () {
       return {
-        position: ''
+        position: '',
+        startPoint: '',
+        endPoint: ''
       }
     },
     components: {
@@ -28,6 +42,10 @@
       },
       search() {
         this.position = this.$refs.input1.value;
+      },
+      searchLoad() {
+        this.startPoint = this.$refs.input2.value;
+        this.endPoint = this.$refs.input3.value;
       }
     },
     mounted() {

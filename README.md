@@ -6,7 +6,13 @@
 
 在index.html中引入
 ```javascript
-<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.7&key=e7e6678466c0f99679aa8fe87f1d9783"></script>
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.7&key=你的开发key（详细请看官网https://lbs.amap.com/）"></script>
+```
+
+使用步行路线图时还需引入
+```javascript
+<link rel="stylesheet" href="https://cache.amap.com/lbs/static/AMap.WalkingRender1120.css"/>
+<script type="text/javascript" src="https://cache.amap.com/lbs/static/WalkingRender1230.js"></script>
 ```
 
 在webpack.base.conf.js中加入
@@ -27,7 +33,7 @@ npm run dev
 ```
 
 页面路由
-http://localhost:8080/#/map
+http://localhost:8080/#/
 
 ## 2.使用API
 
@@ -36,6 +42,10 @@ http://localhost:8080/#/map
 | --------   | -----:  | -----:  | :----:  |
 | center     | 地图初始化中心点 | array |   null     |
 | position   | 地图地理位置（如：杭州市余杭区，杭州市黄龙） |   string   |   ''   |
+| startPoint   | 步行路线起点地址 |   string   |   ''   |
+| endPoint   | 步行路线终点地址 |   string   |   ''   |
+| showPanel   | 使用步行路线时使用 |   boolean   |   false   |
+| moreMarker   | 是否开始多标点模式 |   boolean   |   false   |
 
 ### 2.方法
 | 方法名        | 说明   |  回调参数  |
