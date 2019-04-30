@@ -1,0 +1,18 @@
+{
+  "name": "yh-map",
+  "version": "1.0.1",
+  "description": "高德地图二次封装",
+  "main": "index.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/misty0304"
+  },
+  "keywords": [
+    "yh-map"
+  ],
+  "author": "huhuan",
+  "license": "ISC"
+}

@@ -8,10 +8,12 @@
     <h-map
       class="map"
       :zoom="15"
+      :positionLngLat="[116.406315,39.908775]"
       :position="position"
       :startPoint="startPoint"
       :endPoint="endPoint"
       :showPanel="false"
+      :getLngAndLat="getLngAndLat"
       @cityChange="getData"
       @getLngLat="getLngLat"
     ></h-map>
@@ -19,7 +21,7 @@
 </template>
 
 <script>
-  import HMap from 'hh-map';
+  import HMap from '../components/HMap';
   export default {
     name: 'Map',
     data () {
@@ -33,6 +35,9 @@
       HMap
     },
     methods: {
+      getLngAndLat(x, y) {
+        console.log(1, x, y);
+      },
       getData(data) {
         console.log(data);
 //        this.position = data.regeocode.formattedAddress;

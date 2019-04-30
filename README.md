@@ -40,12 +40,14 @@ http://localhost:8080/#/
 ### 1.属性
 | 属性名     |  说明 | 类型   |  默认  |
 | --------   | -----:  | -----:  | :----:  |
-| center     | 地图初始化中心点 | array |   null     |
+| center     | 地图初始化中心点,如果有标点传入优先使用标点 | array |   null     |
+| positionLngLat   | 地图初始化标点 |   array   |   []   |
 | position   | 地图地理位置（如：杭州市余杭区，杭州市黄龙） |   string   |   ''   |
 | startPoint   | 步行路线起点地址 |   string   |   ''   |
 | endPoint   | 步行路线终点地址 |   string   |   ''   |
 | showPanel   | 使用步行路线时使用 |   boolean   |   false   |
 | moreMarker   | 是否开始多标点模式 |   boolean   |   false   |
+| getLngLat   | 获取当前地址的经纬度 |   function(x, y)   |      |
 
 ### 2.方法
 | 方法名        | 说明   |  回调参数  |
