@@ -47,7 +47,7 @@ http://localhost:8080/#/
 | endPoint   | 步行路线终点地址 |   string   |   ''   |
 | showPanel   | 使用步行路线时使用 |   boolean   |   false   |
 | moreMarker   | 是否开始多标点模式 |   boolean   |   false   |
-| getLngLat   | 获取当前地址的经纬度 |   function(x, y)   |      |
+| getLngAndLat   | 获取当前地址的经纬度 |   function(x, y)   |      |
 
 ### 2.方法
 | 方法名        | 说明   |  回调参数  |
